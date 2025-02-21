@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <style>
+        body {
+            background-color: #1e1e2f; /* Dark background for better contrast */
+            color: white; /* White text for readability */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+        }
+        
+        .form-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+        .feature{
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: hsl(281, 87.20%, 53.90%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        form {
+            background-color: #2e2e3f; /* Slightly lighter background for forms */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 600px; 
+            align : center;
+        }
+        
+        form label, form input, form select {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        
+        form input, form select {
+            padding: 8px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background-color: #1e1e2f;
+            color: white;
+        }
+        
+        form input:focus, form select:focus {
+            outline: none;
+            border-color:rgb(169, 197, 80);
+        }
+        
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: hsl(249, 88.70%, 27.80%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        button:hover {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Heart Disease Prediction using Machine Learning</h1>
+    <a href = "{% url 'features' %}" ><button class='feature'> Know About the Features</button></a>
+    <div class="form-container">
+        <form id="heart_disease_prediction" action="result" method="POST">
+            {% csrf_token %}
+            <label>Enter your Age</label> 
+            <input type="number" name="age">
+            <label for="gender">Enter your Gender</label> 
+            <input list="gender-options" id="gender" name="gender">
+            <datalist id="gender-options">
+                <option value="Male"></option>
+                <option value="Female"></option>
+            </datalist>
+            <label for="pain-type">Chest Pain Type</label>
+            <select id="pain-type" name="pain-type">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <label for="bp">Resting Blood Pressure</label>
+            <input type="number" name="bp">
+            <label for="cholesterol">Enter Cholesterol Value</label>
+            <input type="number" name="cholesterol">
+            <label for="fbs">Fasting Blood Sugar</label>
+            <select id="fbs" name="fbs">
+                <option value="0">0</option>
+                <option value="1">1</option>
+            </select>
+            <label for="ecg">Resting ECG</label>
+            <select id="ecg" name="ecg">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+            <label for="max_hr">Max Heart Rate</label>
+            <input type="number" name="max_hr">
+            <label for="depression">ST Depression</label>
+            <input type="number" name="depression" placeholder="Enter a value that is nearest to the round number">
+            <label for="slope">ST Slope</label>
+            <select id="slope" name="slope">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+            <label for="vessels">Number of Major Vessels</label>
+            <select id="vessels" name="vessels">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <label for="thal">Thal</label>
+            <select id="thal" name="thal">
+                <option value="0">0</option>
+                <option value="1">1</option>
+            </select>
+            <label for="history">Family History</label>
+            <select id="history" name="history">
+                <option value="0">0</option>
+                <option value="1">1</option>
+            </select>
+            <label for="medication">Medication Usage</label>
+            <select id="medication" name="medication">
+                <option value="0">0</option>
+                <option value="1">1</option>
+            </select>
+            <label for="Smoking_Alcohol">Smoking and Alcohol</label>
+            <select id="Smoking_Alcohol" name="Smoking_Alcohol">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <label for="exercise_physical">Exercise Angina and Physical Activity</label>
+            <select id="exercise_physical" name="exercise_physical">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <button type="submit">Get Prediction</button>
+        </form>
+    </div>
+</body>
+</html>

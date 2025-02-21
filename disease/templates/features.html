@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Features</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #333;
+            color: #f4f4f4;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            background: #444;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+            align : center;
+        }
+        h2 {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+        .feature {
+            margin-bottom: 15px;
+        }
+        .feature strong {
+            color: #f4f4f4;
+            font-size: 18px;
+        }
+        .value {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .return{
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: hsl(281, 87.20%, 53.90%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Heart Disease Features Explanation</h1>
+
+    <div class="feature">
+        <h2>Age</h2>
+        <p><strong>Definition:</strong> Patient's age in years.</p>
+        <p><strong>Example:</strong> 45, 60, 32</p>
+    </div>
+
+    <div class="feature">
+        <h2>Sex</h2>
+        <p><strong>Definition:</strong> Biological sex of the patient.</p>
+        <p><strong>Values:</strong> <span class="value">0</span> = Female, <span class="value">1</span> = Male</p>
+    </div>
+
+    <div class="feature">
+        <h2>Chest Pain Type</h2>
+        <p><strong>Definition:</strong> Type of chest pain experienced by the patient.</p>
+        <p><strong>Values:</strong></p>
+        <ul>
+            <li><span class="value">1</span> = Typical angina</li>
+            <li><span class="value">2</span> = Atypical angina</li>
+            <li><span class="value">3</span> = Non-anginal pain</li>
+            <li><span class="value">4</span> = Asymptomatic</li>
+        </ul>
+    </div>
+
+    <div class="feature">
+        <h2>Resting Blood Pressure</h2>
+        <p><strong>Definition:</strong> Blood pressure measured while resting (in mmHg).</p>
+        <p><strong>Example:</strong> 120, 140, 160</p>
+    </div>
+
+    <div class="feature">
+        <h2>Cholesterol</h2>
+        <p><strong>Definition:</strong> Serum cholesterol level (mg/dL).</p>
+        <p><strong>Example:</strong> 200, 250, 300</p>
+    </div>
+
+    <div class="feature">
+        <h2>Fasting Blood Sugar</h2>
+        <p><strong>Definition:</strong> Blood sugar level after fasting.</p>
+        <p><strong>Values:</strong> <span class="value">0</span> = < 120 mg/dL, <span class="value">1</span> = ≥ 120 mg/dL</p>
+    </div>
+
+    <div class="feature">
+        <h2>Resting ECG</h2>
+        <p><strong>Definition:</strong> Electrocardiographic results at rest.</p>
+        <p><strong>Values:</strong></p>
+        <ul>
+            <li><span class="value">0</span> = Normal</li>
+            <li><span class="value">1</span> = ST-T wave abnormality</li>
+            <li><span class="value">2</span> = Left ventricular hypertrophy</li>
+        </ul>
+    </div>
+
+    <div class="feature">
+        <h2>Max Heart Rate</h2>
+        <p><strong>Definition:</strong> Maximum heart rate achieved during exercise.</p>
+        <p><strong>Example:</strong> 150, 180, 200</p>
+    </div>
+
+    <div class="feature">
+        <h2>ST Depression</h2>
+        <p><strong>Definition:</strong> Depression of the ST segment in ECG.</p>
+        <p><strong>Example:</strong> 1.2, 2.5, 3.0</p>
+    </div>
+
+    <div class="feature">
+        <h2>ST Slope</h2>
+        <p><strong>Definition:</strong> Slope of the ST segment during peak exercise.</p>
+        <p><strong>Values:</strong></p>
+        <ul>
+            <li><span class="value">1</span> = Upsloping</li>
+            <li><span class="value">2</span> = Flat</li>
+            <li><span class="value">3</span> = Downsloping</li>
+        </ul>
+    </div>
+
+    <div class="feature">
+        <h2>Number of Major Vessels</h2>
+        <p><strong>Definition:</strong> Number of major blood vessels colored by fluoroscopy.</p>
+        <p><strong>Values:</strong> <span class="value">0</span> to <span class="value">4</span></p>
+    </div>
+
+    <div class="feature">
+        <h2>Thal</h2>
+        <p><strong>Definition:</strong> Thalassemia disease.</p>
+        <p><strong>Values:</strong> <span class="value">0</span> = No, <span class="value">1</span> = Yes</p>
+    </div>
+
+    <div class="feature">
+        <h2>Smoking and Alcohol</h2>
+        <p><strong>Definition:</strong> Smoking and alcohol consumption levels.</p>
+        <p><strong>Values:</strong></p>
+        <ul>
+            <li><span class="value">0</span> = Non-smoker, Non-drinker</li>
+            <li><span class="value">1</span> = Smoker, Non-drinker</li>
+            <li><span class="value">2</span> = Non-smoker, Drinker</li>
+            <li><span class="value">3</span> = Smoker, Drinker</li>
+        </ul>
+    </div>
+
+    <div class="feature">
+        <h2>Exercise Angina and Physical Activity</h2>
+        <p><strong>Definition:</strong> Exercise-induced angina and physical activity levels.</p>
+        <p><strong>Values:</strong></p>
+        <ul>
+            <li><span class="value">1</span> = No angina, Low physical activity</li>
+            <li><span class="value">2</span> = No angina, High physical activity</li>
+            <li><span class="value">3</span> = Angina present, Low physical activity</li>
+            <li><span class="value">4</span> = Angina present, High physical activity</li>
+        </ul>
+    </div>
+    <a href = 'home.html'><button class = 'return' >Return to Home</button></a> 
+
+</div>
+
+</body>
+</html>

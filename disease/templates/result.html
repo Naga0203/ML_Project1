@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Heart Disease Prediction Result</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #e0f7fa, #80deea); /* Gradient background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .result {
+            padding: 50px;
+            border-radius: 20px;
+            background-color: #ffffff; /* White background for the result container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        p{
+            font-size : 20px;
+            font-family: 'Lobster', cursive;
+        }
+        h2{
+            font-size : 30px;
+            border-bottom : 20px;
+            font-family: 'Lobster', cursive;
+        }
+    </style>
+</head>
+<body>
+    <div class='result'> 
+        <h2>Prediction Result</h2>
+        <p>Prediction: {{ result.prediction }}</p>
+        <p>Probability: {{ result.probability }}</p>
+        <p>Message: {{ result.message }}</p>
+    </div>
+</body>
+</html>
